@@ -1,0 +1,256 @@
+syntax = "proto3";
+package msg;
+
+// 报错
+enum ENError {
+    RET_OK   = 0; // 成功
+    RET_FAIL = 1; // 失败
+}
+
+//频道类型
+enum ChannelType{
+    ChannelType_World = 0;  // 世界聊天
+    ChannelType_Sys   = 1;  // 系统
+}
+
+// 物品功能分类标签
+enum Tag{
+    TAG_UNKOWN           = 0;   //功能未知
+    TAG_ROLE             = 1;   //主角 
+    TAG_HERO             = 2;   //副将 
+    TAG_TITLE            = 3;   //称号 
+    TAG_PROFESSION_TITLE = 4;   //职业称号 
+    TAG_CASINO_TITLE     = 5;   //娱乐场称号
+    TAG_MONEY            = 6;   //货币 
+    TAG_EQUIP            = 7;   //装备 
+    TAG_TOOLS            = 8;   //道具 
+    TAG_GEM              = 9;   //宝石 
+}
+
+//////////////////////////////////////////////////////////////////////////
+// -----分割线------ 以上是 emun 类型，以下是 message 类型 
+//////////////////////////////////////////////////////////////////////////
+
+
+
+// 普通协议
+message CommonProtocol {
+    uint32 id     = 1;
+    bytes  submsg = 2;
+}
+
+// 注册
+message RegReq {
+    string name = 1;
+    string pwd  = 2;
+}
+
+// 注册rsp
+message RegRsp {
+    string ret = 1;
+    ENError code = 2;
+}
+
+// 登陆
+message LoginReq {
+    string name = 1;
+    string pwd  = 2;
+    string loginRandomStr = 3; //用于重连的时候识别是否要踢掉线
+}
+
+// 登录rsp
+message LoginRsp {
+    string        ret        = 1;
+    ServerListRsp serverList = 2;
+}
+// 选择服务器
+message SelectServerReq {
+    string serverName = 1;
+}
+// 选择服务器
+message SelectServerRsp {
+    string     ret        = 1;
+    string     serverName = 2;
+    PlayerList players    = 3;
+}
+// 选择Player
+message SelectPlayerReq {
+    string playerName = 1;
+}
+// 选择Player
+message SelectPlayerRsp {
+    string   ret          = 1;
+    string   mapName      = 2;
+    Player   player       = 3;
+    repeated ChatRsp chat = 4;
+}    
+
+// 创建Player
+message CreatePlayerReq {
+    string playerName = 1;
+    uint32 profession = 2;
+}
+// 创建Player rsp
+message CreatePlayerRsp {
+    string     ret     = 1;
+    PlayerList players = 2;
+}  
+
+// 服务器列表
+message ServerListReq {
+}
+
+// 服务器列表Rsp
+message ServerListRsp {
+    string   ret                   = 1;
+    repeated ServerInfo serverinfo = 2;
+}
+
+// 服务器
+message ServerInfo {
+    string name   = 1;
+    string ip     = 2;
+    uint32 online = 3;  // 当前在线数
+    uint32 num    = 4;  // 当前用户数
+    uint32 max    = 5;  // 上限
+}
+
+// 选择职业
+message SelProfessionReq {
+    int32 index = 1;
+}
+
+// 选择职业rsp
+message SelProfessionRsp {
+    string ret    = 1;
+    Player player = 2;
+}
+
+// 聊天
+message ChatReq {
+    string content = 1;
+}
+
+// 聊天rsp
+message ChatRsp {
+    string name        = 1;
+    string icon        = 2;
+    string content     = 3;
+    uint64 time        = 4;
+    uint32 channelType = 5;
+}
+//曲线
+message Curve{
+    repeated CurvePoint point = 1;
+    uint64   maxNum           = 2;  // （最高等级的）最大数量
+    uint64   curveRange       = 3;  // 曲线或数量的浮动范围
+    repeated uint64 num       = 4;  // 计算出来的，每一个等级对应的数值
+    string   name             = 5;  // 针对的属性名
+}
+//曲线中的点
+message CurvePoint{
+    int32 x  = 1;  // x值
+    int32 y  = 2;  // y值
+}
+// 物品或物品
+message Stuff {
+    string   name          = 1;  // 名称,在配置里读取
+    int32    num           = 2;  // 数量
+    int32    level         = 3;  // 等级
+    int32    numType       = 4;  // 数量类型，只在编辑器中使用，用于辨别示范包含文字，0代表纯数字，1代表包含文字枚举。
+    repeated string numStr = 5;  // 如果是文字枚举，则本数组包含对应数值的文字含义。
+
+    string icon   = 50;  // 图标名称
+    string desc   = 51;  // 文字描述
+    string getWay = 52;  // 获得途径说明
+    int32  index  = 53;  // 背包下标（位置）
+
+    repeated Curve curve = 100;  // 曲线
+    uint32   levelMax    = 101;  // 最大等级
+    repeated Tag    tag  = 102;  // 分类、功能标签
+    repeated Stuff  sub  = 103;  // 子物品集合
+}
+
+//用户
+message User{
+    string     pwd                                       = 1;
+    string     name                                      = 2;
+    repeated   PlayerNamesAndServer playerNamesAndServer = 3;
+    Player     player                                    = 4; // 当前控制的player
+    PlayerList listOfPlayer                              = 5; // 用户拥有的所有玩家实体
+}
+
+//服务器名和玩家名
+message PlayerNamesAndServer{
+    string serverName = 1;
+    string playerName = 2;
+}
+
+//player列表
+message PlayerList {
+    repeated Player player = 1;
+}
+
+//玩家
+message Player {
+    Stuff    core          = 1;   // 核心属性值
+    repeated Stuff bag     = 2;   // 背包
+    Stuff    weapon        = 3;   // 武器
+    Stuff    face          = 4;   // 头像
+    Stuff    profession    = 5;   // 职业 
+    Stuff    coin          = 6;   // 游戏币
+    Stuff    coinBind      = 7;   // 游戏币绑定版
+    Stuff    gold          = 8;   // 钻石或金砖
+    Stuff    goldBind      = 9;   // 钻石或金砖绑定版
+    string   name          = 10;  // 名称,区别于用户名,这是具体的玩家实体的名称,一个用户拥有多个玩家实体
+    string   serverName    = 11;  // 合服后，当前所在服务器的名称
+    string   serverNameOld = 12;  // 合服前，所在服务器的名称
+}
+
+// 保存物品
+message GMStuffSaveReq {
+    Stuff stuff = 1;
+}
+
+// 保存物品Rsp
+message GMStuffSaveRsp {
+    string ret = 1;
+}
+
+// 删除物品
+message GMStuffDelReq {
+    string name = 1;
+}
+
+// 删除物品rsp
+message GMStuffDelRsp {
+    string ret = 1;
+}
+
+// 获取所有物品
+message GMStuffListReq {
+    uint32 random = 1;
+}
+
+// 获取所有物品
+message GMStuffListRsp {
+    string ret  = 1;
+    repeated Stuff list = 2;
+}
+
+// 获取物品
+message GetReq {
+    string name = 1;
+    uint32 num = 2;
+}
+
+// 获取物品rsp
+message GetRsp {
+    string ret  = 1;
+    repeated Stuff stuff = 2;
+}
+
+// 踢掉线rsp
+message KickNotify {
+    string ret  = 1;
+}

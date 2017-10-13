@@ -1,0 +1,1481 @@
+{
+  "files": [
+    {
+      "name": "msg.proto",
+      "description": "",
+      "package": "msg",
+      "hasEnums": true,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [
+        {
+          "name": "ChannelType",
+          "longName": "ChannelType",
+          "fullName": "msg.ChannelType",
+          "description": "频道类型",
+          "values": [
+            {
+              "name": "ChannelType_World",
+              "number": "0",
+              "description": "世界聊天"
+            },
+            {
+              "name": "ChannelType_Sys",
+              "number": "1",
+              "description": "系统"
+            }
+          ]
+        },
+        {
+          "name": "ENError",
+          "longName": "ENError",
+          "fullName": "msg.ENError",
+          "description": "报错",
+          "values": [
+            {
+              "name": "RET_OK",
+              "number": "0",
+              "description": "成功"
+            },
+            {
+              "name": "RET_FAIL",
+              "number": "1",
+              "description": "失败"
+            }
+          ]
+        },
+        {
+          "name": "Tag",
+          "longName": "Tag",
+          "fullName": "msg.Tag",
+          "description": "物品功能分类标签",
+          "values": [
+            {
+              "name": "TAG_UNKOWN",
+              "number": "0",
+              "description": "功能未知"
+            },
+            {
+              "name": "TAG_ROLE",
+              "number": "1",
+              "description": "主角"
+            },
+            {
+              "name": "TAG_HERO",
+              "number": "2",
+              "description": "副将"
+            },
+            {
+              "name": "TAG_TITLE",
+              "number": "3",
+              "description": "称号"
+            },
+            {
+              "name": "TAG_PROFESSION_TITLE",
+              "number": "4",
+              "description": "职业称号"
+            },
+            {
+              "name": "TAG_CASINO_TITLE",
+              "number": "5",
+              "description": "娱乐场称号"
+            },
+            {
+              "name": "TAG_MONEY",
+              "number": "6",
+              "description": "货币"
+            },
+            {
+              "name": "TAG_EQUIP",
+              "number": "7",
+              "description": "装备"
+            },
+            {
+              "name": "TAG_TOOLS",
+              "number": "8",
+              "description": "道具"
+            },
+            {
+              "name": "TAG_GEM",
+              "number": "9",
+              "description": "宝石"
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ChatReq",
+          "longName": "ChatReq",
+          "fullName": "msg.ChatReq",
+          "description": "聊天",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "content",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ChatRsp",
+          "longName": "ChatRsp",
+          "fullName": "msg.ChatRsp",
+          "description": "聊天rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "icon",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "content",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "time",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "defaultValue": ""
+            },
+            {
+              "name": "channelType",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CommonProtocol",
+          "longName": "CommonProtocol",
+          "fullName": "msg.CommonProtocol",
+          "description": "普通协议",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            },
+            {
+              "name": "submsg",
+              "description": "",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CreatePlayerReq",
+          "longName": "CreatePlayerReq",
+          "fullName": "msg.CreatePlayerReq",
+          "description": "创建Player",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "playerName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "profession",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CreatePlayerRsp",
+          "longName": "CreatePlayerRsp",
+          "fullName": "msg.CreatePlayerRsp",
+          "description": "创建Player rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "players",
+              "description": "",
+              "label": "",
+              "type": "PlayerList",
+              "longType": "PlayerList",
+              "fullType": "msg.PlayerList",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Curve",
+          "longName": "Curve",
+          "fullName": "msg.Curve",
+          "description": "曲线",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "point",
+              "description": "",
+              "label": "repeated",
+              "type": "CurvePoint",
+              "longType": "CurvePoint",
+              "fullType": "msg.CurvePoint",
+              "defaultValue": ""
+            },
+            {
+              "name": "maxNum",
+              "description": "（最高等级的）最大数量",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "defaultValue": ""
+            },
+            {
+              "name": "curveRange",
+              "description": "曲线或数量的浮动范围",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "defaultValue": ""
+            },
+            {
+              "name": "num",
+              "description": "计算出来的，每一个等级对应的数值",
+              "label": "repeated",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "针对的属性名",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CurvePoint",
+          "longName": "CurvePoint",
+          "fullName": "msg.CurvePoint",
+          "description": "曲线中的点",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "x",
+              "description": "x值",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            },
+            {
+              "name": "y",
+              "description": "y值",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GMStuffDelReq",
+          "longName": "GMStuffDelReq",
+          "fullName": "msg.GMStuffDelReq",
+          "description": "删除物品",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GMStuffDelRsp",
+          "longName": "GMStuffDelRsp",
+          "fullName": "msg.GMStuffDelRsp",
+          "description": "删除物品rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GMStuffListReq",
+          "longName": "GMStuffListReq",
+          "fullName": "msg.GMStuffListReq",
+          "description": "获取所有物品",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "random",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GMStuffListRsp",
+          "longName": "GMStuffListRsp",
+          "fullName": "msg.GMStuffListRsp",
+          "description": "获取所有物品",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "list",
+              "description": "",
+              "label": "repeated",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GMStuffSaveReq",
+          "longName": "GMStuffSaveReq",
+          "fullName": "msg.GMStuffSaveReq",
+          "description": "保存物品",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "stuff",
+              "description": "",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GMStuffSaveRsp",
+          "longName": "GMStuffSaveRsp",
+          "fullName": "msg.GMStuffSaveRsp",
+          "description": "保存物品Rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GetReq",
+          "longName": "GetReq",
+          "fullName": "msg.GetReq",
+          "description": "获取物品",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "num",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GetRsp",
+          "longName": "GetRsp",
+          "fullName": "msg.GetRsp",
+          "description": "获取物品rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "stuff",
+              "description": "",
+              "label": "repeated",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "KickNotify",
+          "longName": "KickNotify",
+          "fullName": "msg.KickNotify",
+          "description": "踢掉线rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "LoginReq",
+          "longName": "LoginReq",
+          "fullName": "msg.LoginReq",
+          "description": "登陆",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "pwd",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "loginRandomStr",
+              "description": "用于重连的时候识别是否要踢掉线",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "LoginRsp",
+          "longName": "LoginRsp",
+          "fullName": "msg.LoginRsp",
+          "description": "登录rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "serverList",
+              "description": "",
+              "label": "",
+              "type": "ServerListRsp",
+              "longType": "ServerListRsp",
+              "fullType": "msg.ServerListRsp",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Player",
+          "longName": "Player",
+          "fullName": "msg.Player",
+          "description": "玩家",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "core",
+              "description": "核心属性值",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "bag",
+              "description": "背包",
+              "label": "repeated",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "weapon",
+              "description": "武器",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "face",
+              "description": "头像",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "profession",
+              "description": "职业",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "coin",
+              "description": "游戏币",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "coinBind",
+              "description": "游戏币绑定版",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "gold",
+              "description": "钻石或金砖",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "goldBind",
+              "description": "钻石或金砖绑定版",
+              "label": "",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "名称,区别于用户名,这是具体的玩家实体的名称,一个用户拥有多个玩家实体",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "serverName",
+              "description": "合服后，当前所在服务器的名称",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "serverNameOld",
+              "description": "合服前，所在服务器的名称",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PlayerList",
+          "longName": "PlayerList",
+          "fullName": "msg.PlayerList",
+          "description": "player列表",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "player",
+              "description": "",
+              "label": "repeated",
+              "type": "Player",
+              "longType": "Player",
+              "fullType": "msg.Player",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PlayerNamesAndServer",
+          "longName": "PlayerNamesAndServer",
+          "fullName": "msg.PlayerNamesAndServer",
+          "description": "服务器名和玩家名",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "serverName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "playerName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RegReq",
+          "longName": "RegReq",
+          "fullName": "msg.RegReq",
+          "description": "注册",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "pwd",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RegRsp",
+          "longName": "RegRsp",
+          "fullName": "msg.RegRsp",
+          "description": "注册rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "code",
+              "description": "",
+              "label": "",
+              "type": "ENError",
+              "longType": "ENError",
+              "fullType": "msg.ENError",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SelProfessionReq",
+          "longName": "SelProfessionReq",
+          "fullName": "msg.SelProfessionReq",
+          "description": "选择职业",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "index",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SelProfessionRsp",
+          "longName": "SelProfessionRsp",
+          "fullName": "msg.SelProfessionRsp",
+          "description": "选择职业rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "player",
+              "description": "",
+              "label": "",
+              "type": "Player",
+              "longType": "Player",
+              "fullType": "msg.Player",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SelectPlayerReq",
+          "longName": "SelectPlayerReq",
+          "fullName": "msg.SelectPlayerReq",
+          "description": "选择Player",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "playerName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SelectPlayerRsp",
+          "longName": "SelectPlayerRsp",
+          "fullName": "msg.SelectPlayerRsp",
+          "description": "选择Player",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "mapName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "player",
+              "description": "",
+              "label": "",
+              "type": "Player",
+              "longType": "Player",
+              "fullType": "msg.Player",
+              "defaultValue": ""
+            },
+            {
+              "name": "chat",
+              "description": "",
+              "label": "repeated",
+              "type": "ChatRsp",
+              "longType": "ChatRsp",
+              "fullType": "msg.ChatRsp",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SelectServerReq",
+          "longName": "SelectServerReq",
+          "fullName": "msg.SelectServerReq",
+          "description": "选择服务器",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "serverName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SelectServerRsp",
+          "longName": "SelectServerRsp",
+          "fullName": "msg.SelectServerRsp",
+          "description": "选择服务器",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "serverName",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "players",
+              "description": "",
+              "label": "",
+              "type": "PlayerList",
+              "longType": "PlayerList",
+              "fullType": "msg.PlayerList",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServerInfo",
+          "longName": "ServerInfo",
+          "fullName": "msg.ServerInfo",
+          "description": "服务器",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "ip",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "online",
+              "description": "当前在线数",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            },
+            {
+              "name": "num",
+              "description": "当前用户数",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            },
+            {
+              "name": "max",
+              "description": "上限",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServerListReq",
+          "longName": "ServerListReq",
+          "fullName": "msg.ServerListReq",
+          "description": "服务器列表",
+          "hasExtensions": false,
+          "hasFields": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "ServerListRsp",
+          "longName": "ServerListRsp",
+          "fullName": "msg.ServerListRsp",
+          "description": "服务器列表Rsp",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ret",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "serverinfo",
+              "description": "",
+              "label": "repeated",
+              "type": "ServerInfo",
+              "longType": "ServerInfo",
+              "fullType": "msg.ServerInfo",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Stuff",
+          "longName": "Stuff",
+          "fullName": "msg.Stuff",
+          "description": "物品或物品",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "名称,在配置里读取",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "num",
+              "description": "数量",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            },
+            {
+              "name": "level",
+              "description": "等级",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            },
+            {
+              "name": "numType",
+              "description": "数量类型，只在编辑器中使用，用于辨别示范包含文字，0代表纯数字，1代表包含文字枚举。",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            },
+            {
+              "name": "numStr",
+              "description": "如果是文字枚举，则本数组包含对应数值的文字含义。",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "icon",
+              "description": "图标名称",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "desc",
+              "description": "文字描述",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "getWay",
+              "description": "获得途径说明",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "index",
+              "description": "背包下标（位置）",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "defaultValue": ""
+            },
+            {
+              "name": "curve",
+              "description": "曲线",
+              "label": "repeated",
+              "type": "Curve",
+              "longType": "Curve",
+              "fullType": "msg.Curve",
+              "defaultValue": ""
+            },
+            {
+              "name": "levelMax",
+              "description": "最大等级",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "defaultValue": ""
+            },
+            {
+              "name": "tag",
+              "description": "分类、功能标签",
+              "label": "repeated",
+              "type": "Tag",
+              "longType": "Tag",
+              "fullType": "msg.Tag",
+              "defaultValue": ""
+            },
+            {
+              "name": "sub",
+              "description": "子物品集合",
+              "label": "repeated",
+              "type": "Stuff",
+              "longType": "Stuff",
+              "fullType": "msg.Stuff",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "User",
+          "longName": "User",
+          "fullName": "msg.User",
+          "description": "用户",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "pwd",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "defaultValue": ""
+            },
+            {
+              "name": "playerNamesAndServer",
+              "description": "",
+              "label": "repeated",
+              "type": "PlayerNamesAndServer",
+              "longType": "PlayerNamesAndServer",
+              "fullType": "msg.PlayerNamesAndServer",
+              "defaultValue": ""
+            },
+            {
+              "name": "player",
+              "description": "当前控制的player",
+              "label": "",
+              "type": "Player",
+              "longType": "Player",
+              "fullType": "msg.Player",
+              "defaultValue": ""
+            },
+            {
+              "name": "listOfPlayer",
+              "description": "用户拥有的所有玩家实体",
+              "label": "",
+              "type": "PlayerList",
+              "longType": "PlayerList",
+              "fullType": "msg.PlayerList",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    }
+  ],
+  "scalarValueTypes": [
+    {
+      "protoType": "double",
+      "notes": "",
+      "cppType": "double",
+      "csType": "double",
+      "goType": "float64",
+      "javaType": "double",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "float",
+      "notes": "",
+      "cppType": "float",
+      "csType": "float",
+      "goType": "float32",
+      "javaType": "float",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "int32",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "int64",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "uint32",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "uint64",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint32",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint64",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "fixed32",
+      "notes": "Always four bytes. More efficient than uint32 if values are often greater than 2^28.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "fixed64",
+      "notes": "Always eight bytes. More efficient than uint64 if values are often greater than 2^56.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "sfixed32",
+      "notes": "Always four bytes.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sfixed64",
+      "notes": "Always eight bytes.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "bool",
+      "notes": "",
+      "cppType": "bool",
+      "csType": "bool",
+      "goType": "bool",
+      "javaType": "boolean",
+      "phpType": "boolean",
+      "pythonType": "boolean",
+      "rubyType": "TrueClass/FalseClass"
+    },
+    {
+      "protoType": "string",
+      "notes": "A string must always contain UTF-8 encoded or 7-bit ASCII text.",
+      "cppType": "string",
+      "csType": "string",
+      "goType": "string",
+      "javaType": "String",
+      "phpType": "string",
+      "pythonType": "str/unicode",
+      "rubyType": "String (UTF-8)"
+    },
+    {
+      "protoType": "bytes",
+      "notes": "May contain any arbitrary sequence of bytes.",
+      "cppType": "string",
+      "csType": "ByteString",
+      "goType": "[]byte",
+      "javaType": "ByteString",
+      "phpType": "string",
+      "pythonType": "str",
+      "rubyType": "String (ASCII-8BIT)"
+    }
+  ]
+}

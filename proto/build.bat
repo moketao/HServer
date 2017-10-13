@@ -1,0 +1,1 @@
+protoc --plugin=protoc-gen-doc.exe --doc_out=./output --doc_opt=json,msg.json input/msg.proto
