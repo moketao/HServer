@@ -5,18 +5,14 @@
 
 ### 目前进度：
 
-
-使用 protoc-gen-doc 导出协议信息
-
-https://github.com/pseudomuto/protoc-gen-doc
-
-
 已整合 [proto2map](https://github.com/moketao/proto2map) 和 [proto2class](https://github.com/moketao/proto2class)，可根据 msg.proto 批量生成代码，如下图:
+
 ![截图](https://github.com/moketao/HServer/raw/master/snap/pic.png)
 
 
+已整合 [protoc-gen-doc](https://github.com/pseudomuto/protoc-gen-doc) 用于导出协议信息
 
-逻辑编写（进行中...）
+其它：合成逻辑（进行中...）
 
 
 
