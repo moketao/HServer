@@ -5,7 +5,7 @@ package logic.messages
 	public class {{.Name}}
 	{
 		{{- range $i,$v := .Values }}
-		public static var {{$v.Number}}:int = {{toAsType $v.Name}};	//{{$v.Desc}}
+		public static var {{$v.Name}}:int = {{$v.Number}};	//{{$v.Desc}}
 		{{- end }}
 	}
 {{else}}

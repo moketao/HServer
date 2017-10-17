@@ -11,6 +11,14 @@
 https://github.com/pseudomuto/protoc-gen-doc
 
 
+已整合 [proto2map](https://github.com/moketao/proto2map) 和 [proto2class](https://github.com/moketao/proto2class)，可根据 msg.proto 批量生成代码，如下图:
+![截图](https://github.com/moketao/HServer/raw/master/snap/pic.png)
+
+
+
+逻辑编写（进行中...）
+
+
 
 ### 目标设定：
 
