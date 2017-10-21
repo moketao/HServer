@@ -1,0 +1,1 @@
+protoc --java_out=output/java input/msg.proto
