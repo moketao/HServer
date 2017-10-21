@@ -19,9 +19,10 @@ public final class MessageIDs {
 		classMap.put(Msg.{{.Name}}.class, {{.Code}});
 		{{if hasSuffix .Name "Req"}}handleMap.put({{.Code}}, new {{.Name}}Handler());{{end}}
 		{{end}}
-
-		{{ range .Messages -}}
-		public static Msg.{{.Name}} to{{.Name}}(ByteString data) {Msg.{{.Name}}.Builder b = Msg.{{.Name}}.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		{{ end}}
 	}
+
+	{{ range .Messages -}}
+	public static Msg.{{.Name}} to{{.Name}}(ByteString data) {Msg.{{.Name}}.Builder b = Msg.{{.Name}}.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	{{ end}}
 }
+

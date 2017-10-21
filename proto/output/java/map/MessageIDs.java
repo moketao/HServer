@@ -150,8 +150,9 @@ public final class MessageIDs {
 		classMap.put(Msg.User.class, 33);
 		
 		
-
+	}
 		public static Msg.ChatReq toChatReq(ByteString data) {Msg.ChatReq.Builder b = Msg.ChatReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+		
 		public static Msg.ChatRsp toChatRsp(ByteString data) {Msg.ChatRsp.Builder b = Msg.ChatRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
 		public static Msg.CommonProtocol toCommonProtocol(ByteString data) {Msg.CommonProtocol.Builder b = Msg.CommonProtocol.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
 		public static Msg.CreatePlayerReq toCreatePlayerReq(ByteString data) {Msg.CreatePlayerReq.Builder b = Msg.CreatePlayerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
@@ -187,4 +188,3 @@ public final class MessageIDs {
 		public static Msg.User toUser(ByteString data) {Msg.User.Builder b = Msg.User.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
 		
 	}
-}
