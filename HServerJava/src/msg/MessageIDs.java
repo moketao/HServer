@@ -148,43 +148,40 @@ public final class MessageIDs {
 		
 		protoMap.put(33, Msg.User.class);
 		classMap.put(Msg.User.class, 33);
-		
-		
 	}
-		public static Msg.ChatReq toChatReq(ByteString data) {Msg.ChatReq.Builder b = Msg.ChatReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		
-		public static Msg.ChatRsp toChatRsp(ByteString data) {Msg.ChatRsp.Builder b = Msg.ChatRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.CommonProtocol toCommonProtocol(ByteString data) {Msg.CommonProtocol.Builder b = Msg.CommonProtocol.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.CreatePlayerReq toCreatePlayerReq(ByteString data) {Msg.CreatePlayerReq.Builder b = Msg.CreatePlayerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.CreatePlayerRsp toCreatePlayerRsp(ByteString data) {Msg.CreatePlayerRsp.Builder b = Msg.CreatePlayerRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.Curve toCurve(ByteString data) {Msg.Curve.Builder b = Msg.Curve.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.CurvePoint toCurvePoint(ByteString data) {Msg.CurvePoint.Builder b = Msg.CurvePoint.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GMStuffDelReq toGMStuffDelReq(ByteString data) {Msg.GMStuffDelReq.Builder b = Msg.GMStuffDelReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GMStuffDelRsp toGMStuffDelRsp(ByteString data) {Msg.GMStuffDelRsp.Builder b = Msg.GMStuffDelRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GMStuffListReq toGMStuffListReq(ByteString data) {Msg.GMStuffListReq.Builder b = Msg.GMStuffListReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GMStuffListRsp toGMStuffListRsp(ByteString data) {Msg.GMStuffListRsp.Builder b = Msg.GMStuffListRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GMStuffSaveReq toGMStuffSaveReq(ByteString data) {Msg.GMStuffSaveReq.Builder b = Msg.GMStuffSaveReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GMStuffSaveRsp toGMStuffSaveRsp(ByteString data) {Msg.GMStuffSaveRsp.Builder b = Msg.GMStuffSaveRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GetReq toGetReq(ByteString data) {Msg.GetReq.Builder b = Msg.GetReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.GetRsp toGetRsp(ByteString data) {Msg.GetRsp.Builder b = Msg.GetRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.KickNotify toKickNotify(ByteString data) {Msg.KickNotify.Builder b = Msg.KickNotify.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.LoginReq toLoginReq(ByteString data) {Msg.LoginReq.Builder b = Msg.LoginReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.LoginRsp toLoginRsp(ByteString data) {Msg.LoginRsp.Builder b = Msg.LoginRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.Player toPlayer(ByteString data) {Msg.Player.Builder b = Msg.Player.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.PlayerList toPlayerList(ByteString data) {Msg.PlayerList.Builder b = Msg.PlayerList.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.PlayerNamesAndServer toPlayerNamesAndServer(ByteString data) {Msg.PlayerNamesAndServer.Builder b = Msg.PlayerNamesAndServer.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.RegReq toRegReq(ByteString data) {Msg.RegReq.Builder b = Msg.RegReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.RegRsp toRegRsp(ByteString data) {Msg.RegRsp.Builder b = Msg.RegRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.SelProfessionReq toSelProfessionReq(ByteString data) {Msg.SelProfessionReq.Builder b = Msg.SelProfessionReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.SelProfessionRsp toSelProfessionRsp(ByteString data) {Msg.SelProfessionRsp.Builder b = Msg.SelProfessionRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.SelectPlayerReq toSelectPlayerReq(ByteString data) {Msg.SelectPlayerReq.Builder b = Msg.SelectPlayerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.SelectPlayerRsp toSelectPlayerRsp(ByteString data) {Msg.SelectPlayerRsp.Builder b = Msg.SelectPlayerRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.SelectServerReq toSelectServerReq(ByteString data) {Msg.SelectServerReq.Builder b = Msg.SelectServerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.SelectServerRsp toSelectServerRsp(ByteString data) {Msg.SelectServerRsp.Builder b = Msg.SelectServerRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.ServerInfo toServerInfo(ByteString data) {Msg.ServerInfo.Builder b = Msg.ServerInfo.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.ServerListReq toServerListReq(ByteString data) {Msg.ServerListReq.Builder b = Msg.ServerListReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.ServerListRsp toServerListRsp(ByteString data) {Msg.ServerListRsp.Builder b = Msg.ServerListRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.Stuff toStuff(ByteString data) {Msg.Stuff.Builder b = Msg.Stuff.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		public static Msg.User toUser(ByteString data) {Msg.User.Builder b = Msg.User.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
-		
-	}
+	public static Msg.ChatReq toChatReq(ByteString data) {Msg.ChatReq.Builder b = Msg.ChatReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.ChatRsp toChatRsp(ByteString data) {Msg.ChatRsp.Builder b = Msg.ChatRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.CommonProtocol toCommonProtocol(ByteString data) {Msg.CommonProtocol.Builder b = Msg.CommonProtocol.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.CreatePlayerReq toCreatePlayerReq(ByteString data) {Msg.CreatePlayerReq.Builder b = Msg.CreatePlayerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.CreatePlayerRsp toCreatePlayerRsp(ByteString data) {Msg.CreatePlayerRsp.Builder b = Msg.CreatePlayerRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.Curve toCurve(ByteString data) {Msg.Curve.Builder b = Msg.Curve.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.CurvePoint toCurvePoint(ByteString data) {Msg.CurvePoint.Builder b = Msg.CurvePoint.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GMStuffDelReq toGMStuffDelReq(ByteString data) {Msg.GMStuffDelReq.Builder b = Msg.GMStuffDelReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GMStuffDelRsp toGMStuffDelRsp(ByteString data) {Msg.GMStuffDelRsp.Builder b = Msg.GMStuffDelRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GMStuffListReq toGMStuffListReq(ByteString data) {Msg.GMStuffListReq.Builder b = Msg.GMStuffListReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GMStuffListRsp toGMStuffListRsp(ByteString data) {Msg.GMStuffListRsp.Builder b = Msg.GMStuffListRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GMStuffSaveReq toGMStuffSaveReq(ByteString data) {Msg.GMStuffSaveReq.Builder b = Msg.GMStuffSaveReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GMStuffSaveRsp toGMStuffSaveRsp(ByteString data) {Msg.GMStuffSaveRsp.Builder b = Msg.GMStuffSaveRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GetReq toGetReq(ByteString data) {Msg.GetReq.Builder b = Msg.GetReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.GetRsp toGetRsp(ByteString data) {Msg.GetRsp.Builder b = Msg.GetRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.KickNotify toKickNotify(ByteString data) {Msg.KickNotify.Builder b = Msg.KickNotify.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.LoginReq toLoginReq(ByteString data) {Msg.LoginReq.Builder b = Msg.LoginReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.LoginRsp toLoginRsp(ByteString data) {Msg.LoginRsp.Builder b = Msg.LoginRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.Player toPlayer(ByteString data) {Msg.Player.Builder b = Msg.Player.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.PlayerList toPlayerList(ByteString data) {Msg.PlayerList.Builder b = Msg.PlayerList.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.PlayerNamesAndServer toPlayerNamesAndServer(ByteString data) {Msg.PlayerNamesAndServer.Builder b = Msg.PlayerNamesAndServer.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.RegReq toRegReq(ByteString data) {Msg.RegReq.Builder b = Msg.RegReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.RegRsp toRegRsp(ByteString data) {Msg.RegRsp.Builder b = Msg.RegRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.SelProfessionReq toSelProfessionReq(ByteString data) {Msg.SelProfessionReq.Builder b = Msg.SelProfessionReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.SelProfessionRsp toSelProfessionRsp(ByteString data) {Msg.SelProfessionRsp.Builder b = Msg.SelProfessionRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.SelectPlayerReq toSelectPlayerReq(ByteString data) {Msg.SelectPlayerReq.Builder b = Msg.SelectPlayerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.SelectPlayerRsp toSelectPlayerRsp(ByteString data) {Msg.SelectPlayerRsp.Builder b = Msg.SelectPlayerRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.SelectServerReq toSelectServerReq(ByteString data) {Msg.SelectServerReq.Builder b = Msg.SelectServerReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.SelectServerRsp toSelectServerRsp(ByteString data) {Msg.SelectServerRsp.Builder b = Msg.SelectServerRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.ServerInfo toServerInfo(ByteString data) {Msg.ServerInfo.Builder b = Msg.ServerInfo.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.ServerListReq toServerListReq(ByteString data) {Msg.ServerListReq.Builder b = Msg.ServerListReq.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.ServerListRsp toServerListRsp(ByteString data) {Msg.ServerListRsp.Builder b = Msg.ServerListRsp.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.Stuff toStuff(ByteString data) {Msg.Stuff.Builder b = Msg.Stuff.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	public static Msg.User toUser(ByteString data) {Msg.User.Builder b = Msg.User.newBuilder();try {b.mergeFrom(data);}catch (InvalidProtocolBufferException e) {e.printStackTrace();}return b.build();}
+	
+}
