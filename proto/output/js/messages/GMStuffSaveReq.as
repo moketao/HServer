@@ -15,7 +15,7 @@ package logic.messages
 	{
 		public static var GMStuffSaveReq_PROTO:*;
 		
-		public var stuff:*;
+		public var stuff:logic.messages.Stuff;
 
 
 		public static var PROTO_STATIC_ID:int = 11; // 协议号

@@ -17,10 +17,10 @@ package logic.messages
 		public static var CurvePoint_PROTO:*;
 		
 		/**x值*/
-		public var x:*;
+		public var x:int;
 		
 		/**y值*/
-		public var y:*;
+		public var y:int;
 
 
 		public static var PROTO_STATIC_ID:int = 6; // 协议号

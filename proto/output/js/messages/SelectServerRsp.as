@@ -21,7 +21,7 @@ package logic.messages
 		
 		public var serverName:String="";
 		
-		public var players:*;
+		public var players:logic.messages.PlayerList;
 
 
 		public static var PROTO_STATIC_ID:int = 28; // 协议号

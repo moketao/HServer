@@ -16,7 +16,7 @@ package logic.messages
 	{
 		public static var CommonProtocol_PROTO:*;
 		
-		public var id:*;
+		public var id:Number=0;
 		
 		public var submsg:*;
 

@@ -18,7 +18,7 @@ package logic.messages
 		
 		public var ret:String="";
 		
-		public var player:*;
+		public var player:logic.messages.Player;
 
 
 		public static var PROTO_STATIC_ID:int = 24; // 协议号

@@ -27,31 +27,31 @@ package logic.messages
 		public static var Player_PROTO:*;
 		
 		/**核心属性值*/
-		public var core:*;
+		public var core:logic.messages.Stuff;
 		
 		/**背包*/
-		public var bag:*;
+		public var bag:Array=[] // Stuff ;
 		
 		/**武器*/
-		public var weapon:*;
+		public var weapon:logic.messages.Stuff;
 		
 		/**头像*/
-		public var face:*;
+		public var face:logic.messages.Stuff;
 		
 		/**职业*/
-		public var profession:*;
+		public var profession:logic.messages.Stuff;
 		
 		/**游戏币*/
-		public var coin:*;
+		public var coin:logic.messages.Stuff;
 		
 		/**游戏币绑定版*/
-		public var coinBind:*;
+		public var coinBind:logic.messages.Stuff;
 		
 		/**钻石或金砖*/
-		public var gold:*;
+		public var gold:logic.messages.Stuff;
 		
 		/**钻石或金砖绑定版*/
-		public var goldBind:*;
+		public var goldBind:logic.messages.Stuff;
 		
 		/**名称,区别于用户名,这是具体的玩家实体的名称,一个用户拥有多个玩家实体*/
 		public var name:String="";

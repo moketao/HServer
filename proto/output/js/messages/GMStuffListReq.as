@@ -15,7 +15,7 @@ package logic.messages
 	{
 		public static var GMStuffListReq_PROTO:*;
 		
-		public var random:*;
+		public var random:Number=0;
 
 
 		public static var PROTO_STATIC_ID:int = 9; // 协议号

@@ -15,7 +15,7 @@ package logic.messages
 	{
 		public static var SelProfessionReq_PROTO:*;
 		
-		public var index:*;
+		public var index:int;
 
 
 		public static var PROTO_STATIC_ID:int = 23; // 协议号

@@ -18,7 +18,7 @@ package logic.messages
 		
 		public var ret:String="";
 		
-		public var serverList:*;
+		public var serverList:logic.messages.ServerListRsp;
 
 
 		public static var PROTO_STATIC_ID:int = 17; // 协议号

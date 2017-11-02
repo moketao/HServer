@@ -23,13 +23,13 @@ package logic.messages
 		
 		public var name:String="";
 		
-		public var playerNamesAndServer:*;
+		public var playerNamesAndServer:Array=[] // PlayerNamesAndServer ;
 		
 		/**当前控制的player*/
-		public var player:*;
+		public var player:logic.messages.Player;
 		
 		/**用户拥有的所有玩家实体*/
-		public var listOfPlayer:*;
+		public var listOfPlayer:logic.messages.PlayerList;
 
 
 		public static var PROTO_STATIC_ID:int = 33; // 协议号

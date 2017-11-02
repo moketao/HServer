@@ -18,7 +18,7 @@ package logic.messages
 		
 		public var ret:String="";
 		
-		public var code:*;
+		public var code:logic.messages.ENError;
 
 
 		public static var PROTO_STATIC_ID:int = 22; // 协议号

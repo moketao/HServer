@@ -15,7 +15,7 @@ package logic.messages
 	{
 		public static var PlayerList_PROTO:*;
 		
-		public var player:*;
+		public var player:Array=[] // Player ;
 
 
 		public static var PROTO_STATIC_ID:int = 19; // 协议号

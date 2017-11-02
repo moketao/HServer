@@ -28,7 +28,7 @@ package logic.messages
 		{{- range $i,$v := .Fields }}
 		{{if $v.Desc}}
 		/**{{$v.Desc}}*/{{end}}
-		public var {{$v.Name}}:{{toAsType $v.Type}};
+		public var {{$v.Name}}:{{toAsType $v.Type  $v.Label}};
 		{{- end }}
 
 

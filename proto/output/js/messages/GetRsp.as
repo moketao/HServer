@@ -18,7 +18,7 @@ package logic.messages
 		
 		public var ret:String="";
 		
-		public var stuff:*;
+		public var stuff:Array=[] // Stuff ;
 
 
 		public static var PROTO_STATIC_ID:int = 14; // 协议号

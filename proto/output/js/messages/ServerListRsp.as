@@ -18,7 +18,7 @@ package logic.messages
 		
 		public var ret:String="";
 		
-		public var serverinfo:*;
+		public var serverinfo:Array=[] // ServerInfo ;
 
 
 		public static var PROTO_STATIC_ID:int = 31; // 协议号

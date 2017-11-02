@@ -9,6 +9,7 @@ package logic.messages
 		var message:GetReq = new GetReq();
 		message.name = name;
 		message.num = num;
+		message.userName = userName;
 		message.send();
 
 	 **/
@@ -18,7 +19,9 @@ package logic.messages
 		
 		public var name:String="";
 		
-		public var num:*;
+		public var num:Number=0;
+		
+		public var userName:String="";
 
 
 		public static var PROTO_STATIC_ID:int = 13; // 协议号
@@ -32,7 +35,7 @@ package logic.messages
 		}
 		public override function myEncode():*{
 			if(GetReq_PROTO==null) GetReq_PROTO = Net.root.lookup("msg.GetReq");
-			var m:* = GetReq_PROTO.create({name:name, num:num});
+			var m:* = GetReq_PROTO.create({name:name, num:num, userName:userName});
 			var buffer:* = GetReq_PROTO.encode( m ).finish();
 			return buffer
 		}

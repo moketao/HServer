@@ -24,13 +24,13 @@ package logic.messages
 		public var ip:String="";
 		
 		/**当前在线数*/
-		public var online:*;
+		public var online:Number=0;
 		
 		/**当前用户数*/
-		public var num:*;
+		public var num:Number=0;
 		
 		/**上限*/
-		public var max:*;
+		public var max:Number=0;
 
 
 		public static var PROTO_STATIC_ID:int = 29; // 协议号

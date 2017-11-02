@@ -25,9 +25,9 @@ package logic.messages
 		
 		public var content:String="";
 		
-		public var time:*;
+		public var time:Number=0;
 		
-		public var channelType:*;
+		public var channelType:Number=0;
 
 
 		public static var PROTO_STATIC_ID:int = 1; // 协议号

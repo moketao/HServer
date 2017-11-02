@@ -19,16 +19,16 @@ package logic.messages
 	{
 		public static var Curve_PROTO:*;
 		
-		public var point:*;
+		public var point:Array=[] // CurvePoint ;
 		
 		/**（最高等级的）最大数量*/
-		public var maxNum:*;
+		public var maxNum:Number=0;
 		
 		/**曲线或数量的浮动范围*/
-		public var curveRange:*;
+		public var curveRange:Number=0;
 		
 		/**计算出来的，每一个等级对应的数值*/
-		public var num:*;
+		public var num:Array=[] // uint64 ;
 		
 		/**针对的属性名*/
 		public var name:String="";

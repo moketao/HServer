@@ -22,9 +22,9 @@ package logic.messages
 		
 		public var mapName:String="";
 		
-		public var player:*;
+		public var player:logic.messages.Player;
 		
-		public var chat:*;
+		public var chat:Array=[] // ChatRsp ;
 
 
 		public static var PROTO_STATIC_ID:int = 26; // 协议号

@@ -18,7 +18,7 @@ package logic.messages
 		
 		public var playerName:String="";
 		
-		public var profession:*;
+		public var profession:Number=0;
 
 
 		public static var PROTO_STATIC_ID:int = 3; // 协议号
